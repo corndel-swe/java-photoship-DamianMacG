@@ -109,13 +109,10 @@ public class Pixels {
         int average = (red + green + blue) / 3;
         if (average < 128) {
             return Arrays.asList(0, 0, 0);
-        } else if (average > 128) {
-            return Arrays.asList(255, 255, 255);
         }
+        return Arrays.asList(255, 255, 255);
 
-        // If the average is below 128, set all values to 0 (black); otherwise, set them
-        // to 255 (white)
-        return null;
+
     }
 
     /**
