@@ -58,8 +58,10 @@ public class Pixels {
      * @return The RGB list with inverted colors.
      */
     public static List<Integer> invert(List<Integer> rgb) {
-        // Invert each color value by subtracting it from 255
-        return null;
+        rgb.set(0, -255);
+        rgb.set(1, -255);
+        rgb.set(2, -255);
+        return rgb;
     }
 
     /**
