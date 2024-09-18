@@ -20,6 +20,6 @@ public class Exercise2b {
   public static List<Double> convertFilesizes(List<Double> files) {
     return files.stream()
             .map(n -> n / 1000) // Convert KB to MB
-            .collect(Collectors.toList());
+            .toList();
   }
 }
