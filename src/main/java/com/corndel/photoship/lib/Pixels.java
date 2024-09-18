@@ -60,9 +60,9 @@ public class Pixels {
      */
     public static List<Integer> invert(List<Integer> rgb) {
 
-        int red = rgb.get(0) - 255;
-        int green = rgb.get(1) - 255;
-        int blue = rgb.get(2) - 255;
+        int red = 255 - rgb.get(0);
+        int green = 255 - rgb.get(1);
+        int blue = 255 - rgb.get(2);
         rgb.set(0, red);
         rgb.set(1, green);
         rgb.set(2, blue);
@@ -127,7 +127,7 @@ public class Pixels {
      * @return The RGB list with only the specified color channel.
      */
     public static List<Integer> colorChannel(List<Integer> rgb, char color) {
-        // TODO
+//        if(char = )
         return null;
     }
 
