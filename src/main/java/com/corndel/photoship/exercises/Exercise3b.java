@@ -1,5 +1,7 @@
 package com.corndel.photoship.exercises;
 
+import static java.lang.Math.round;
+
 public class Exercise3b {
   // https://tech-docs.corndel.com/java/string-formatting.html
 
@@ -14,7 +16,8 @@ public class Exercise3b {
    * @returns {String} currency The formatted number
    */
   public static String formatPrice(double amount, String currency) {
-    // TODO
-    return null;
+
+    return String.format("%s%.2f", currency, amount);
   }
+
 }
