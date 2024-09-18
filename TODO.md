@@ -6,9 +6,9 @@
 
 ## High priority
 
-- [ ] Complete `stripGreen()`
+- [x] Complete `stripGreen()`
 
-- [ ] Complete `stripBlue()`
+- [x] Complete `stripBlue()`
 
 - [ ] Complete `invert()`
 
