@@ -10,9 +10,9 @@
 
 - [x] Complete `stripBlue()`
 
-- [ ] Complete `invert()`
+- [x] Complete `invert()`
 
-- [ ] Complete `grayScale()`
+- [x] Complete `grayScale()`
 
 - [ ] Complete `blackAndWhite()`
 

@@ -1,5 +1,6 @@
 package com.corndel.photoship.lib;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Pixels {
@@ -74,10 +75,13 @@ public class Pixels {
      * @return The RGB list with the grayscale values applied.
      */
     public static List<Integer> grayscale(List<Integer> rgb) {
-        // Calculate the average of the red, green, and blue values
+        int red = rgb.get(0);
+        int green = rgb.get(1);
+        int blue = rgb.get(2);
 
-        // Set all components to the average value to create a grayscale effect
-        return null;
+        int average = (red + green + blue) / 3;
+
+        return Arrays.asList(average, average, average);
     }
 
     /**
