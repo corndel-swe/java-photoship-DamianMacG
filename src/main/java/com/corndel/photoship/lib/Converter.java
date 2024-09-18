@@ -23,7 +23,7 @@ public class Converter {
     public void saveImage() throws IOException {
         String specificFile = this.filename;
         ImageIO.write(this.image, "jpg", new File("src/main/resources/img/" + specificFile.substring(0, specificFile.length() - 4) + "-output.jpg"));
-        System.out.println("Great work Damian, all change - you are the best!");
+        System.out.println("Great work Damian, all saved to /img/" + specificFile.substring(0, specificFile.length() - 4) + "-output.jpg");
     }
 
     public void applyFilter(PixelFilter filter) {
