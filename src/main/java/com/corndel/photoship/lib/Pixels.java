@@ -156,12 +156,20 @@ public class Pixels {
      */
     public static List<Integer> sepia(List<Integer> rgb) {
         // Extract the original red, green, and blue values
+        float red = rgb.get(0);
+        float green = rgb.get(1);
+        float blue = rgb.get(2);
 
-        // Apply the sepia tone formula to each color component
+        int newRed = (int) Math.min(255, (0.393 * red) + (0.769 * green) + (0.189 * blue));
+        int newGreen = (int) Math.min(255, (0.349 * red) + (0.686 * green) + (0.168 * blue));
+        int newBlue = (int) Math.min(255, (0.272 * red) + (0.534 * green) + (0.131 * blue));
+
+        // Update the RGB list with the new sepia values
+        return Arrays.asList(newRed, newGreen, newBlue);
 
         // Update the RGB list with the new sepia values
 
-        return null;
+       
     }
 
     /**
