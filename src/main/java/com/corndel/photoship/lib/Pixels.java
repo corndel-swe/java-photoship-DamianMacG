@@ -169,7 +169,7 @@ public class Pixels {
 
         // Update the RGB list with the new sepia values
 
-       
+
     }
 
     /**
@@ -187,10 +187,9 @@ public class Pixels {
      * @return The RGB list with the adjusted brightness.
      */
     public static List<Integer> adjustBrightness(List<Integer> rgb, int brightness) {
-        // Adjust the red, green, and blue values and clamp them between 0 and 255
-
-        // Update the RGB list with the new brightness-adjusted values
-
-        return null;
+        int red = Math.min(255, Math.max(0, rgb.get(0) + brightness));
+        int green = Math.min(255, Math.max(0, rgb.get(1) + brightness));
+        int blue = Math.min(255, Math.max(0, rgb.get(2) + brightness));
+        return Arrays.asList(red, green, blue);
     }
 }
