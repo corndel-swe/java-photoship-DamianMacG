@@ -59,9 +59,13 @@ public class Pixels {
      * @return The RGB list with inverted colors.
      */
     public static List<Integer> invert(List<Integer> rgb) {
-        rgb.set(0, -255);
-        rgb.set(1, -255);
-        rgb.set(2, -255);
+
+        int red = rgb.get(0) - 255;
+        int green = rgb.get(1) - 255;
+        int blue = rgb.get(2) - 255;
+        rgb.set(0, red);
+        rgb.set(1, green);
+        rgb.set(2, blue);
         return rgb;
     }
 
@@ -97,6 +101,17 @@ public class Pixels {
      */
     public static List<Integer> blackAndWhite(List<Integer> rgb) {
         // Calculate the average of the red, green, and blue values
+
+        int red = rgb.get(0);
+        int green = rgb.get(1);
+        int blue = rgb.get(2);
+
+        int average = (red + green + blue) / 3;
+        if (average < 128) {
+            return Arrays.asList(0, 0, 0);
+        } else if (average > 128) {
+            return Arrays.asList(255, 255, 255);
+        }
 
         // If the average is below 128, set all values to 0 (black); otherwise, set them
         // to 255 (white)
