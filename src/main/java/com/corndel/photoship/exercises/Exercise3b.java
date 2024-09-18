@@ -16,9 +16,8 @@ public class Exercise3b {
    * @returns {String} currency The formatted number
    */
   public static String formatPrice(double amount, String currency) {
-    double roundedAmount = Math.round(amount * 100.0) / 100.0;
 
-    return String.format("%s%.2f", currency, roundedAmount);
+    return String.format("%s%.2f", currency, amount);
   }
 
 }
